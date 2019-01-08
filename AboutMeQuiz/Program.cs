@@ -15,13 +15,14 @@ namespace AboutMeQuiz
         {
             Console.WriteLine("In the Play function");
             // The application must provide at least 5 different questions
-            // Question 1. Which martial art have I not studied?
-                // a. Brazilian Jujitsu
-                // b. Aikido
-                // c. Tae Kwan Do
-                // d. Jeet Kune Do
+            Console.WriteLine("Question 1. Which martial art have I not studied?");
+            Console.WriteLine("\ta. Brazilian Jujitsu");
+            Console.WriteLine("\tb. Aikido");
+            Console.WriteLine("\tc. Tae Kwan Do");
+            Console.WriteLine("\td. Jeet Kune Do");
 
                 // The correct answer is Brazilian Jujitsu
+
     
             // Question 2. How many novels have I written?
                 // 1. 3
