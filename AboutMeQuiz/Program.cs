@@ -16,18 +16,27 @@ namespace AboutMeQuiz
         static void Play()
         {
             int totalQuestions = 5;
-            string question, answer;
+            string question, correctAnswer, userAnswer;
 
             // Ask questions and ask for an answer from the user after each question
             for (int i = 0; i < totalQuestions; i++)
             {
                 question = AskQuestion(i)[0];
+         
                 Console.WriteLine(question);
 
-                answer = Console.ReadLine();
+                userAnswer = Console.ReadLine();
+                correctAnswer = AskQuestion(i)[1];
 
-                Console.WriteLine($"You entered { answer }");
-
+                // Check to see if the user's answer matches the correct answer
+                if (CheckAnswer(userAnswer, correctAnswer))
+                {
+                    Console.WriteLine("That is correct!");
+                }
+                else
+                {
+                    Console.WriteLine("That is incorrect. You don't know me at all, do you? :(");
+                }
             }
         }
 
@@ -120,7 +129,7 @@ namespace AboutMeQuiz
             }
         }
 
-        static bool IsCorrect (string userAnswer, string correctAnswer)
+        static bool CheckAnswer(string userAnswer, string correctAnswer)
         {
             return true;
         }
