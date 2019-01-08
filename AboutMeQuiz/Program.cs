@@ -80,7 +80,9 @@ namespace AboutMeQuiz
             Console.WriteLine("\t3. The Thing");
             Console.WriteLine("\t4. The Avengers");
 
+            string answer4 = Console.ReadLine();
 
+            Console.WriteLine($"You said {answer4}");
 
             // The correct answer is The Thing
 
