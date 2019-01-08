@@ -98,6 +98,10 @@ namespace AboutMeQuiz
             Console.WriteLine("\tc. The ability to read minds");
             Console.WriteLine("\td. The ability to swing through the air with a web made of hair");
 
+            string answer5 = Console.ReadLine();
+
+            Console.WriteLine($"You enterd { answer5 }");
+
             // The correct answer is the ability to teleport
 
         }
