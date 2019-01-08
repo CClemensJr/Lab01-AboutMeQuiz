@@ -100,9 +100,14 @@ namespace AboutMeQuiz
 
             string answer5 = Console.ReadLine();
 
-            Console.WriteLine($"You enterd { answer5 }");
-
-            // The correct answer is the ability to teleport
+            if (answer5.ToUpper() == "B")
+            {
+                Console.WriteLine("\nThat is correct. I would love to be able to teleport. No more commute!");
+            }
+            else
+            {
+                Console.WriteLine("\nThat is incorrect. I want to be able to teleport so I can skip leg day altogether.");
+            }
 
         }
 
