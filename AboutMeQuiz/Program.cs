@@ -6,7 +6,12 @@ namespace AboutMeQuiz
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Play();
+        }
+
+        static void Play()
+        {
+            Console.WriteLine("In the Play function");
         }
     }
 }
