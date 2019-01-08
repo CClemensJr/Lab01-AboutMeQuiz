@@ -72,24 +72,26 @@ namespace AboutMeQuiz
             {
                 Console.WriteLine("\nThat is incorrect. I love to rock out to some Bohemian Rhapsody.");
             }
-            
 
-            // Question 4. My favorite movie is:
-                // 1. The Notebook
-                // 2. The Matrix
-                // 3. The Thing
-                // 4. The Avengers
 
-                // The correct answer is The Thing
+            Console.WriteLine("\nQuestion 4. My favorite movie is:");
+            Console.WriteLine("\t1. The Notebook");
+            Console.WriteLine("\t2. The Matrix");
+            Console.WriteLine("\t3. The Thing");
+            Console.WriteLine("\t4. The Avengers");
+
+
+
+            // The correct answer is The Thing
 
             // Question 5. Which ability do I covet the most?
-                //a. The ability to fly
-                //b. The ability to teleport
-                //c. The ability to read minds
-                //d. The ability to swing through the air with a web made of hair
+            //a. The ability to fly
+            //b. The ability to teleport
+            //c. The ability to read minds
+            //d. The ability to swing through the air with a web made of hair
 
             // The correct answer is the ability to teleport
-                
+
         }
 
 
