@@ -4,10 +4,12 @@ namespace AboutMeQuiz
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             // Main will call the Play function to activate the came without any direct code manipulation.
             Play();
+            ShowScore();
 
             Console.ReadLine();
         }
@@ -16,6 +18,7 @@ namespace AboutMeQuiz
         static void Play()
         {
             int totalQuestions = 5;
+       
             string question, correctAnswer, userAnswer;
 
             // Ask questions and ask for an answer from the user after each question
@@ -32,10 +35,14 @@ namespace AboutMeQuiz
                 // Check to see if the user's answer matches the correct answer
                 if (CheckAnswer(userAnswer, correctAnswer))
                 {
+                    // Add to the score if answered correctly
+                    TotalScore(1);
+                    // Let the user know they got it right!
                     Console.WriteLine("That is correct! I feel like we've known each other for years!");
                 }
                 else
                 {
+                    // Let user know they got it wrong
                     Console.WriteLine("That is incorrect. You don't know me at all, do you? :(");
                 }
             }
@@ -133,6 +140,23 @@ namespace AboutMeQuiz
         static bool CheckAnswer(string userAnswer, string correctAnswer)
         {
             return correctAnswer.Contains(userAnswer);
+        }
+
+        // This function keeps track of correct answers
+        static int TotalScore(int incrementBy)
+        {
+            int score = 0;
+
+            score += incrementBy;
+
+            return score;
+        }
+
+        static void ShowScore()
+        {
+            int highScore = TotalScore(0);
+
+            Console.WriteLine($"Congratulations! You answered { highScore } questions correctly!");
         }
     }
 }
