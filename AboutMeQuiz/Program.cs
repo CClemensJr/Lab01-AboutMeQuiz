@@ -21,6 +21,10 @@ namespace AboutMeQuiz
             Console.WriteLine("\tc. Tae Kwan Do");
             Console.WriteLine("\td. Jeet Kune Do");
 
+            string answer1 = Console.ReadLine();
+
+            Console.WriteLine($"You entered { answer1 }");
+
                 // The correct answer is Brazilian Jujitsu
 
     
