@@ -62,6 +62,10 @@ namespace AboutMeQuiz
             Console.WriteLine("\ta. True");
             Console.WriteLine("\tb. False");
 
+            string answer3 = Console.ReadLine();
+
+            Console.WriteLine($"You answered { answer3 }");
+
                 // The correct answer is true
 
             // Question 4. My favorite movie is:
