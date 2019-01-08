@@ -15,15 +15,16 @@ namespace AboutMeQuiz
         // Play is the function that will call all of the other functions.
         static void Play()
         {
-            Console.WriteLine("In the Play function");
-            // The application must provide at least 5 different questions
+            int totalQuestions = 5;
 
-            // The first question deals with my training in martial arts. Martial arts have been in important part of my life for many years.
-            Console.WriteLine("Question 1. Which martial art have I not studied?");
-            Console.WriteLine("\ta. Brazilian Jujitsu");
-            Console.WriteLine("\tb. Aikido");
-            Console.WriteLine("\tc. Tae Kwan Do");
-            Console.WriteLine("\td. Jeet Kune Do");
+            for (int i = 0; i < totalQuestions; i++)
+            {
+                AskQuestion(i);
+
+            }
+            // The application must ask at least 5 different questions
+
+
 
             // Collecte user input
             string answer1 = Console.ReadLine();
@@ -40,11 +41,6 @@ namespace AboutMeQuiz
 
 
             // Rinse and repeat for each question
-            Console.WriteLine("\nQuestion 2. How many novels have I written?");
-            Console.WriteLine("\t1. 3");
-            Console.WriteLine("\t2. 1");
-            Console.WriteLine("\t3. 5");
-            Console.WriteLine("\t4. 2");
 
             string answer2 = Console.ReadLine();
 
@@ -58,10 +54,6 @@ namespace AboutMeQuiz
             }
 
 
-            Console.WriteLine("\nQuestion 3. My go to karaoke song is Bohemian Rhapsody by Queen.");
-            Console.WriteLine("\ta. True");
-            Console.WriteLine("\tb. False");
-
             string answer3 = Console.ReadLine();
 
             if (answer3.ToUpper() == "A")
@@ -74,12 +66,6 @@ namespace AboutMeQuiz
             }
 
 
-            Console.WriteLine("\nQuestion 4. My favorite movie is:");
-            Console.WriteLine("\t1. The Notebook");
-            Console.WriteLine("\t2. The Matrix");
-            Console.WriteLine("\t3. The Thing");
-            Console.WriteLine("\t4. The Avengers");
-
             string answer4 = Console.ReadLine();
 
             if (answer4 == "3")
@@ -91,12 +77,6 @@ namespace AboutMeQuiz
                 Console.WriteLine("\nThat is incorrect. My favorite movie is The Thing. Don't ask why. Well, I guess you can ask.");
             }
 
-
-            Console.WriteLine("\nQuestion 5. Which ability do I covet the most?");
-            Console.WriteLine("\ta. The ability to fly");
-            Console.WriteLine("\tb. The ability to teleport");
-            Console.WriteLine("\tc. The ability to read minds");
-            Console.WriteLine("\td. The ability to swing through the air with a web made of hair");
 
             string answer5 = Console.ReadLine();
 
@@ -113,6 +93,35 @@ namespace AboutMeQuiz
 
         static string AskQuestion(int questionNumber)
         {
+            // The first question deals with my training in martial arts. Martial arts have been in important part of my life for many years.
+            Console.WriteLine("Question 1. Which martial art have I not studied?");
+            Console.WriteLine("\ta. Brazilian Jujitsu");
+            Console.WriteLine("\tb. Aikido");
+            Console.WriteLine("\tc. Tae Kwan Do");
+            Console.WriteLine("\td. Jeet Kune Do");
+
+            Console.WriteLine("\nQuestion 2. How many novels have I written?");
+            Console.WriteLine("\t1. 3");
+            Console.WriteLine("\t2. 1");
+            Console.WriteLine("\t3. 5");
+            Console.WriteLine("\t4. 2");
+
+            Console.WriteLine("\nQuestion 3. My go to karaoke song is Bohemian Rhapsody by Queen.");
+            Console.WriteLine("\ta. True");
+            Console.WriteLine("\tb. False");
+
+            Console.WriteLine("\nQuestion 4. My favorite movie is:");
+            Console.WriteLine("\t1. The Notebook");
+            Console.WriteLine("\t2. The Matrix");
+            Console.WriteLine("\t3. The Thing");
+            Console.WriteLine("\t4. The Avengers");
+
+            Console.WriteLine("\nQuestion 5. Which ability do I covet the most?");
+            Console.WriteLine("\ta. The ability to fly");
+            Console.WriteLine("\tb. The ability to teleport");
+            Console.WriteLine("\tc. The ability to read minds");
+            Console.WriteLine("\td. The ability to swing through the air with a web made of hair");
+
             return "A question will be asked";
         }
     }
