@@ -37,6 +37,7 @@ namespace AboutMeQuiz
             }
 
 
+            // Rinse and repeat for each question
             Console.WriteLine("\nQuestion 2. How many novels have I written?");
             Console.WriteLine("\t1. 3");
             Console.WriteLine("\t2. 1");
@@ -45,8 +46,15 @@ namespace AboutMeQuiz
 
             string answer2 = Console.ReadLine();
 
-            Console.WriteLine($"You entered { answer2 }");
-                // The correct answer is 3
+            if (answer2 == "1")
+            {
+                Console.WriteLine("\nThat is correct. I have written three novels, though none of them have been published. Yet. ;)");
+            }
+            else
+            {
+                Console.WriteLine("\nThat is incorrect. I have written three novels, though none of them have been published. Yet. ;)");
+            }
+
 
             // Question 3. My go to karaoke song is Bohemian Rhapsody by Queen.
                 // a. True
