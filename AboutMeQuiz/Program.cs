@@ -16,132 +16,108 @@ namespace AboutMeQuiz
         static void Play()
         {
             int totalQuestions = 5;
-            string answer;
+            string question, answer;
 
             // Ask questions and ask for an answer from the user after each question
             for (int i = 0; i < totalQuestions; i++)
             {
-                AskQuestion(i);
+                question = AskQuestion(i)[0];
+                Console.WriteLine(question);
 
                 answer = Console.ReadLine();
 
                 Console.WriteLine($"You entered { answer }");
 
             }
-
-            
-            // Add some logic to let the user know if they were right or wrong
-            //if (answer1.ToUpper() == "A")
-            //{
-            //    Console.WriteLine("\nThat is correct! I have trained in the arts of Aikido, Tae Kwan Do, and Jeet Kune Do but not Brazilian Jujitsu");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("\nI'm sorry but that is incorrect. I have trained in the arts of Aikido, Tae Kwan Do, and Jeet Kune Do but not Brazilian Jujitsu");
-            //}
-
-            //if (answer2 == "1")
-            //{
-            //    Console.WriteLine("\nThat is correct. I have written three novels, though none of them have been published. Yet. ;)");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("\nThat is incorrect. I have written three novels, though none of them have been published. Yet. ;)");
-            //}
-
-            //if (answer3.ToUpper() == "A")
-            //{
-            //    Console.WriteLine("\nThat is correct. I love to rock out to some Bohemian Rhapsody.");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("\nThat is incorrect. I love to rock out to some Bohemian Rhapsody.");
-            //}
-
-            //if (answer4 == "3")
-            //{
-            //    Console.WriteLine("\nThat is correct. My favorite movie is The Thing. Kurt Russell at his finest.");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("\nThat is incorrect. My favorite movie is The Thing. Don't ask why. Well, I guess you can ask.");
-            //}
-
-
-            //if (answer5.ToUpper() == "B")
-            //{
-            //    Console.WriteLine("\nThat is correct. I would love to be able to teleport. No more commute!");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("\nThat is incorrect. I want to be able to teleport so I can skip leg day altogether.");
-            //}
-
         }
 
-        static string AskQuestion(int questionNumber)
+        static string[] AskQuestion(int questionNumber)
         {
-            switch (questionNumber)
+            string fullQuestion, mainQuestion, potentialAnswer1, potentialAnswer2, potentialAnswer3, correctAnswer;
 
+            string[] questionAndAnswers = new string[2];
+
+            switch (questionNumber)
             {
                 case 0: 
                     // The first question deals with my training in martial arts. Martial arts have been in important part of my life for many years.
-                    Console.WriteLine("Question 1. Which martial art have I not studied?");
-                    Console.WriteLine("\ta. Brazilian Jujitsu");
-                    Console.WriteLine("\tb. Aikido");
-                    Console.WriteLine("\tc. Tae Kwan Do");
-                    Console.WriteLine("\td. Jeet Kune Do");
+                    mainQuestion = "\nQuestion 1. Which martial art have I not studied?\n";
+                    correctAnswer = "\ta. Brazilian Jujitsu\n";
+                    potentialAnswer1 = "\tb. Aikido\n";
+                    potentialAnswer2 = "\tc. Tae Kwan Do\n";
+                    potentialAnswer3 = "\td. Jeet Kune Do\n";
 
-                    break;
+                    fullQuestion = mainQuestion + correctAnswer + potentialAnswer1 + potentialAnswer2 + potentialAnswer3;
+
+                    questionAndAnswers[0] = fullQuestion;
+                    questionAndAnswers[1] = correctAnswer;
+
+                    return questionAndAnswers;
 
                 case 1:
                     // For the longest time I thought I wanted to be a novelist.
-                    Console.WriteLine("\nQuestion 2. How many novels have I written?");
-                    Console.WriteLine("\t1. 3");
-                    Console.WriteLine("\t2. 1");
-                    Console.WriteLine("\t3. 5");
-                    Console.WriteLine("\t4. 2");
+                    mainQuestion = "\nQuestion 2. How many novels have I written?\n";
+                    correctAnswer = "\t1. 3\n";
+                    potentialAnswer1 = "\t2. 1\n";
+                    potentialAnswer2 = "\t3. 5\n";
+                    potentialAnswer3 = "\t4. 2\n";
 
-                    break;
+                    fullQuestion = mainQuestion + correctAnswer + potentialAnswer1 + potentialAnswer2 + potentialAnswer3;
+
+                    questionAndAnswers[0] = fullQuestion;
+                    questionAndAnswers[1] = correctAnswer;
+
+                    return questionAndAnswers;
 
                 case 2:
                     // Little known fact. I can sing. Decently enough.
-                    Console.WriteLine("\nQuestion 3. My go to karaoke song is Bohemian Rhapsody by Queen.");
-                    Console.WriteLine("\ta. True");
-                    Console.WriteLine("\tb. False");
+                    mainQuestion = "\nQuestion 3. My go to karaoke song is Bohemian Rhapsody by Queen.\n";
+                    correctAnswer = "\ta. True\n";
+                    potentialAnswer1 = "\tb. False\n";
 
-                    break;
+                    fullQuestion = mainQuestion + correctAnswer + potentialAnswer1;
+
+                    questionAndAnswers[0] = fullQuestion;
+                    questionAndAnswers[1] = correctAnswer;
+
+                    return questionAndAnswers;
 
                 case 3:
                     // I don't know why but I have a fascination with horror movies, especially The Thing
-                    Console.WriteLine("\nQuestion 4. My favorite movie is:");
-                    Console.WriteLine("\t1. The Notebook");
-                    Console.WriteLine("\t2. The Matrix");
-                    Console.WriteLine("\t3. The Thing");
-                    Console.WriteLine("\t4. The Avengers");
+                    mainQuestion = "\nQuestion 4. My favorite movie is:\n";
+                    potentialAnswer1 = "\t1. The Notebook\n";
+                    potentialAnswer2 = "\t2. The Matrix\n";
+                    correctAnswer = "\t3. The Thing\n";
+                    potentialAnswer3 = "\t4. The Avengers\n";
 
-                    break;
+                    fullQuestion = mainQuestion + potentialAnswer1 + potentialAnswer2 + correctAnswer + potentialAnswer3;
+
+                    questionAndAnswers[0] = fullQuestion;
+                    questionAndAnswers[1] = correctAnswer;
+
+                    return questionAndAnswers;
 
                 case 4:
                     // Superpowers are all the rage but noone thinks about practicality! I would save so much time if I could just teleport everywhere.
-                    Console.WriteLine("\nQuestion 5. Which ability do I covet the most?");
-                    Console.WriteLine("\ta. The ability to fly");
-                    Console.WriteLine("\tb. The ability to teleport");
-                    Console.WriteLine("\tc. The ability to read minds");
-                    Console.WriteLine("\td. The ability to swing through the air with a web made of hair");
+                    mainQuestion = "\nQuestion 5. Which ability do I covet the most?\n";
+                    potentialAnswer1 = "\ta. The ability to fly\n";
+                    correctAnswer = "\tb. The ability to teleport\n";
+                    potentialAnswer2 = "\tc. The ability to read minds\n";
+                    potentialAnswer3 = "\td. The ability to swing through the air with a web made of hair\n";
 
-                    break;
+                    fullQuestion = mainQuestion + potentialAnswer1 + correctAnswer + potentialAnswer2 + potentialAnswer3;
+
+                    questionAndAnswers[0] = fullQuestion;
+                    questionAndAnswers[1] = correctAnswer;
+
+                    return questionAndAnswers;
 
                 default:
-                    Console.WriteLine("Please provide valid input");
+                    questionAndAnswers[0] = "Please enter a valid selection.";
+                    questionAndAnswers[1] = "Please enter a valid selection.";
 
-                    break;
-
+                    return questionAndAnswers;
             }
-
-
-
-            return "A question will be asked";
         }
     }
 }
