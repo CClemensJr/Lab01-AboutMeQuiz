@@ -61,10 +61,10 @@ namespace AboutMeQuiz
                 case 0: 
                     // The first question deals with my training in martial arts. Martial arts have been in important part of my life for many years.
                     mainQuestion = "\nQuestion 1. Which martial art have I not studied?\n";
-                    correctAnswer = "\ta. Brazilian Jujitsu\n";
-                    potentialAnswer1 = "\tb. Aikido\n";
-                    potentialAnswer2 = "\tc. Tae Kwan Do\n";
-                    potentialAnswer3 = "\td. Jeet Kune Do\n";
+                    correctAnswer = "\t1. Brazilian Jujitsu\n";
+                    potentialAnswer1 = "\t2. Aikido\n";
+                    potentialAnswer2 = "\t3. Tae Kwan Do\n";
+                    potentialAnswer3 = "\t4. Jeet Kune Do\n";
 
                     fullQuestion = mainQuestion + correctAnswer + potentialAnswer1 + potentialAnswer2 + potentialAnswer3;
 
@@ -91,8 +91,8 @@ namespace AboutMeQuiz
                 case 2:
                     // Little known fact. I can sing. Decently enough.
                     mainQuestion = "\nQuestion 3. My go to karaoke song is Bohemian Rhapsody by Queen.\n";
-                    correctAnswer = "\ta. True\n";
-                    potentialAnswer1 = "\tb. False\n";
+                    correctAnswer = "\t1. True\n";
+                    potentialAnswer1 = "\t2. False\n";
 
                     fullQuestion = mainQuestion + correctAnswer + potentialAnswer1;
 
@@ -119,10 +119,10 @@ namespace AboutMeQuiz
                 case 4:
                     // Superpowers are all the rage but noone thinks about practicality! I would save so much time if I could just teleport everywhere.
                     mainQuestion = "\nQuestion 5. Which ability do I covet the most?\n";
-                    potentialAnswer1 = "\ta. The ability to fly\n";
-                    correctAnswer = "\tb. The ability to teleport\n";
-                    potentialAnswer2 = "\tc. The ability to read minds\n";
-                    potentialAnswer3 = "\td. The ability to swing through the air with a web made of hair\n";
+                    potentialAnswer1 = "\t1. The ability to fly\n";
+                    correctAnswer = "\t2. The ability to teleport\n";
+                    potentialAnswer2 = "\t3. The ability to read minds\n";
+                    potentialAnswer3 = "\t4. The ability to swing through the air with a web made of hair\n";
 
                     fullQuestion = mainQuestion + potentialAnswer1 + correctAnswer + potentialAnswer2 + potentialAnswer3;
 
