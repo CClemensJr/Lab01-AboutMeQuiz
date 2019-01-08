@@ -76,10 +76,10 @@ namespace AboutMeQuiz
                 case 1:
                     // For the longest time I thought I wanted to be a novelist.
                     mainQuestion = "\nQuestion 2. How many novels have I written?\n";
-                    correctAnswer = "\t1. 3\n";
-                    potentialAnswer1 = "\t2. 1\n";
-                    potentialAnswer2 = "\t3. 5\n";
-                    potentialAnswer3 = "\t4. 2\n";
+                    correctAnswer = "\t1. Three\n";
+                    potentialAnswer1 = "\t2. One\n";
+                    potentialAnswer2 = "\t3. Five\n";
+                    potentialAnswer3 = "\t4. Two\n";
 
                     fullQuestion = mainQuestion + correctAnswer + potentialAnswer1 + potentialAnswer2 + potentialAnswer3;
 
@@ -142,7 +142,7 @@ namespace AboutMeQuiz
         //This function checks if the user answer is correct
         static bool CheckAnswer(string userAnswer, string correctAnswer)
         {
-            return correctAnswer.Contains(userAnswer + ".");
+            return correctAnswer.Contains(userAnswer);
         }
 
         // This function keeps track of correct answers
