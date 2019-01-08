@@ -18,10 +18,9 @@ namespace AboutMeQuiz
         // Play is the function that will call all of the other functions.
         static void Play()
         {
-            
             int totalQuestions = 5;
-       
-            string question, correctAnswer, userAnswer;
+            int userAnswer;
+            string question, correctAnswer, userInput;
 
             // Ask questions and ask for an answer from the user after each question
             for (int i = 0; i < totalQuestions; i++)
@@ -30,7 +29,15 @@ namespace AboutMeQuiz
          
                 Console.WriteLine(question);
 
-                userAnswer = Console.ReadLine();
+                try
+                {
+                    userInput = Console.ReadLine();
+                    userAnswer = int.Parse(userInput);
+                }
+                catch (NullReferenceException)
+                {
+                    Console.WriteLine("Please ")
+                }
                 correctAnswer = AskQuestion(i)[1];
 
 
@@ -140,9 +147,9 @@ namespace AboutMeQuiz
         }
 
         //This function checks if the user answer is correct
-        static bool CheckAnswer(string userAnswer, string correctAnswer)
+        static bool CheckAnswer(int userAnswer, string correctAnswer)
         {
-            return correctAnswer.Contains(userAnswer);
+            return correctAnswer.Contains(userAnswer.ToString());
         }
 
         // This function keeps track of correct answers
