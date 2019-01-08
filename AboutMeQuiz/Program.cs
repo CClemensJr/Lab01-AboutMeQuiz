@@ -119,5 +119,10 @@ namespace AboutMeQuiz
                     return questionAndAnswers;
             }
         }
+
+        static bool IsCorrect (string userAnswer, string correctAnswer)
+        {
+            return true;
+        }
     }
 }
