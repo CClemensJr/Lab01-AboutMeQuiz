@@ -82,7 +82,14 @@ namespace AboutMeQuiz
 
             string answer4 = Console.ReadLine();
 
-            Console.WriteLine($"You said {answer4}");
+            if (answer4 == "3")
+            {
+                Console.WriteLine("\nThat is correct. My favorite movie is The Thing. Kurt Russell at his finest.");
+            }
+            else
+            {
+                Console.WriteLine("\nThat is incorrect. My favorite movie is The Thing. Don't ask why. Well, I guess you can ask.");
+            }
 
             // The correct answer is The Thing
 
