@@ -111,6 +111,9 @@ namespace AboutMeQuiz
 
         }
 
-
+        static string AskQuestion(int questionNumber)
+        {
+            return "A question will be asked";
+        }
     }
 }
