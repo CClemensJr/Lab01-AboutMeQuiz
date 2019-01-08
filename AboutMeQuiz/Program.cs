@@ -64,9 +64,15 @@ namespace AboutMeQuiz
 
             string answer3 = Console.ReadLine();
 
-            Console.WriteLine($"You answered { answer3 }");
-
-                // The correct answer is true
+            if (answer3.ToUpper() == "A")
+            {
+                Console.WriteLine("\nThat is correct. I love to rock out to some Bohemian Rhapsody.");
+            }
+            else
+            {
+                Console.WriteLine("\nThat is incorrect. I love to rock out to some Bohemian Rhapsody.");
+            }
+            
 
             // Question 4. My favorite movie is:
                 // 1. The Notebook
