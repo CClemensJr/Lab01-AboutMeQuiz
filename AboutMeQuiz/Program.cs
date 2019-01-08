@@ -20,7 +20,6 @@ namespace AboutMeQuiz
             for (int i = 0; i < totalQuestions; i++)
             {
                 AskQuestion(i);
-
             }
             // The application must ask at least 5 different questions
 
@@ -93,34 +92,62 @@ namespace AboutMeQuiz
 
         static string AskQuestion(int questionNumber)
         {
-            // The first question deals with my training in martial arts. Martial arts have been in important part of my life for many years.
-            Console.WriteLine("Question 1. Which martial art have I not studied?");
-            Console.WriteLine("\ta. Brazilian Jujitsu");
-            Console.WriteLine("\tb. Aikido");
-            Console.WriteLine("\tc. Tae Kwan Do");
-            Console.WriteLine("\td. Jeet Kune Do");
+            switch (questionNumber)
 
-            Console.WriteLine("\nQuestion 2. How many novels have I written?");
-            Console.WriteLine("\t1. 3");
-            Console.WriteLine("\t2. 1");
-            Console.WriteLine("\t3. 5");
-            Console.WriteLine("\t4. 2");
+            {
+                case 0: 
+                    // The first question deals with my training in martial arts. Martial arts have been in important part of my life for many years.
+                    Console.WriteLine("Question 1. Which martial art have I not studied?");
+                    Console.WriteLine("\ta. Brazilian Jujitsu");
+                    Console.WriteLine("\tb. Aikido");
+                    Console.WriteLine("\tc. Tae Kwan Do");
+                    Console.WriteLine("\td. Jeet Kune Do");
 
-            Console.WriteLine("\nQuestion 3. My go to karaoke song is Bohemian Rhapsody by Queen.");
-            Console.WriteLine("\ta. True");
-            Console.WriteLine("\tb. False");
+                    break;
 
-            Console.WriteLine("\nQuestion 4. My favorite movie is:");
-            Console.WriteLine("\t1. The Notebook");
-            Console.WriteLine("\t2. The Matrix");
-            Console.WriteLine("\t3. The Thing");
-            Console.WriteLine("\t4. The Avengers");
+                case 1:
+                    // For the longest time I thought I wanted to be a novelist.
+                    Console.WriteLine("\nQuestion 2. How many novels have I written?");
+                    Console.WriteLine("\t1. 3");
+                    Console.WriteLine("\t2. 1");
+                    Console.WriteLine("\t3. 5");
+                    Console.WriteLine("\t4. 2");
 
-            Console.WriteLine("\nQuestion 5. Which ability do I covet the most?");
-            Console.WriteLine("\ta. The ability to fly");
-            Console.WriteLine("\tb. The ability to teleport");
-            Console.WriteLine("\tc. The ability to read minds");
-            Console.WriteLine("\td. The ability to swing through the air with a web made of hair");
+                    break;
+
+                case 2:
+                    Console.WriteLine("\nQuestion 3. My go to karaoke song is Bohemian Rhapsody by Queen.");
+                    Console.WriteLine("\ta. True");
+                    Console.WriteLine("\tb. False");
+
+                    break;
+
+                case 3:
+                    Console.WriteLine("\nQuestion 4. My favorite movie is:");
+                    Console.WriteLine("\t1. The Notebook");
+                    Console.WriteLine("\t2. The Matrix");
+                    Console.WriteLine("\t3. The Thing");
+                    Console.WriteLine("\t4. The Avengers");
+
+                    break;
+
+                case 4:
+                    Console.WriteLine("\nQuestion 5. Which ability do I covet the most?");
+                    Console.WriteLine("\ta. The ability to fly");
+                    Console.WriteLine("\tb. The ability to teleport");
+                    Console.WriteLine("\tc. The ability to read minds");
+                    Console.WriteLine("\td. The ability to swing through the air with a web made of hair");
+
+                    break;
+
+                default:
+                    Console.WriteLine("Please provide valid input");
+
+                    break;
+
+            }
+
+
 
             return "A question will be asked";
         }
