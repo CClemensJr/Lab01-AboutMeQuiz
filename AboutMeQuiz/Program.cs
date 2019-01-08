@@ -43,6 +43,9 @@ namespace AboutMeQuiz
             Console.WriteLine("\t3. 5");
             Console.WriteLine("\t4. 2");
 
+            string answer2 = Console.ReadLine();
+
+            Console.WriteLine($"You entered { answer2 }");
                 // The correct answer is 3
 
             // Question 3. My go to karaoke song is Bohemian Rhapsody by Queen.
