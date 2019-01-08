@@ -28,10 +28,11 @@ namespace AboutMeQuiz
                 userAnswer = Console.ReadLine();
                 correctAnswer = AskQuestion(i)[1];
 
+
                 // Check to see if the user's answer matches the correct answer
                 if (CheckAnswer(userAnswer, correctAnswer))
                 {
-                    Console.WriteLine("That is correct!");
+                    Console.WriteLine("That is correct! I feel like we've known each other for years!");
                 }
                 else
                 {
@@ -131,7 +132,7 @@ namespace AboutMeQuiz
 
         static bool CheckAnswer(string userAnswer, string correctAnswer)
         {
-            return true;
+            return correctAnswer.Contains(userAnswer);
         }
     }
 }
