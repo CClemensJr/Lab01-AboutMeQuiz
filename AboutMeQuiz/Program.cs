@@ -8,6 +8,8 @@ namespace AboutMeQuiz
         {
             // Main will call the Play function to activate the came without any direct code manipulation.
             Play();
+
+            Console.ReadLine();
         }
 
         // Play is the function that will call all of the other functions.
@@ -29,11 +31,11 @@ namespace AboutMeQuiz
             // Add some logic to let the user know if they were right or wrong
             if (answer1.ToUpper() == "A")
             {
-                Console.WriteLine("That is correct! I have trained in the arts of Aikido, Tae Kwan Do, and Jeet Kune Do but not Brazilian Jujitsu");
+                Console.WriteLine("\nThat is correct! I have trained in the arts of Aikido, Tae Kwan Do, and Jeet Kune Do but not Brazilian Jujitsu");
             }
             else
             {
-                Console.WriteLine("I'm sorry but that is incorrect. I have trained in the arts of Aikido, Tae Kwan Do, and Jeet Kune Do but not Brazilian Jujitsu");
+                Console.WriteLine("\nI'm sorry but that is incorrect. I have trained in the arts of Aikido, Tae Kwan Do, and Jeet Kune Do but not Brazilian Jujitsu");
             }
 
 
@@ -56,9 +58,9 @@ namespace AboutMeQuiz
             }
 
 
-            // Question 3. My go to karaoke song is Bohemian Rhapsody by Queen.
-                // a. True
-                // b. False
+            Console.WriteLine("\nQuestion 3. My go to karaoke song is Bohemian Rhapsody by Queen.");
+            Console.WriteLine("\ta. True");
+            Console.WriteLine("\tb. False");
 
                 // The correct answer is true
 
