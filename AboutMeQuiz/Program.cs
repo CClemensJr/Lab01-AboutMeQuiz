@@ -91,13 +91,12 @@ namespace AboutMeQuiz
                 Console.WriteLine("\nThat is incorrect. My favorite movie is The Thing. Don't ask why. Well, I guess you can ask.");
             }
 
-            // The correct answer is The Thing
 
-            // Question 5. Which ability do I covet the most?
-            //a. The ability to fly
-            //b. The ability to teleport
-            //c. The ability to read minds
-            //d. The ability to swing through the air with a web made of hair
+            Console.WriteLine("\nQuestion 5. Which ability do I covet the most?");
+            Console.WriteLine("\ta. The ability to fly");
+            Console.WriteLine("\tb. The ability to teleport");
+            Console.WriteLine("\tc. The ability to read minds");
+            Console.WriteLine("\td. The ability to swing through the air with a web made of hair");
 
             // The correct answer is the ability to teleport
 
