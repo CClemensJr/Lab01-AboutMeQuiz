@@ -4,6 +4,7 @@ namespace AboutMeQuiz
 {
     class Program
     {
+        public static int score = 0;
 
         static void Main(string[] args)
         {
@@ -17,6 +18,7 @@ namespace AboutMeQuiz
         // Play is the function that will call all of the other functions.
         static void Play()
         {
+            
             int totalQuestions = 5;
        
             string question, correctAnswer, userAnswer;
@@ -137,21 +139,21 @@ namespace AboutMeQuiz
             }
         }
 
+        //This function checks if the user answer is correct
         static bool CheckAnswer(string userAnswer, string correctAnswer)
         {
-            return correctAnswer.Contains(userAnswer);
+            return correctAnswer.Contains(userAnswer + ".");
         }
 
         // This function keeps track of correct answers
         static int TotalScore(int incrementBy)
         {
-            int score = 0;
+            Program.score += incrementBy;
 
-            score += incrementBy;
-
-            return score;
+            return Program.score;
         }
 
+        // Once the user has has completed the questionairre, show the score on the screen
         static void ShowScore()
         {
             int highScore = TotalScore(0);
