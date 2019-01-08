@@ -36,12 +36,12 @@ namespace AboutMeQuiz
                 Console.WriteLine("I'm sorry but that is incorrect. I have trained in the arts of Aikido, Tae Kwan Do, and Jeet Kune Do but not Brazilian Jujitsu");
             }
 
-    
-            // Question 2. How many novels have I written?
-                // 1. 3
-                // 2. 1
-                // 3. 5
-                // 4. 2
+
+            Console.WriteLine("\nQuestion 2. How many novels have I written?");
+            Console.WriteLine("\t1. 3");
+            Console.WriteLine("\t2. 1");
+            Console.WriteLine("\t3. 5");
+            Console.WriteLine("\t4. 2");
 
                 // The correct answer is 3
 
