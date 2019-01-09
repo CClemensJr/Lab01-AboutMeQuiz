@@ -33,26 +33,34 @@ namespace AboutMeQuiz
                 {
                     userInput = Console.ReadLine();
                     userAnswer = int.Parse(userInput);
+
+                    correctAnswer = AskQuestion(i)[1];
+
+                    // Check to see if the user's answer matches the correct answer
+                    if (CheckAnswer(userAnswer, correctAnswer))
+                    {
+                        // Add to the score if answered correctly
+                        TotalScore(1);
+                        // Let the user know they got it right!
+                        Console.WriteLine("That is correct! I feel like we've known each other for years!");
+                    }
+                    else
+                    {
+                        // Let user know they got it wrong
+                        Console.WriteLine("That is incorrect. You don't know me at all, do you? :(");
+                    }
                 }
                 catch (NullReferenceException)
                 {
-                    Console.WriteLine("Please ")
+                    Console.WriteLine("You need to select an answer.");
                 }
-                correctAnswer = AskQuestion(i)[1];
-
-
-                // Check to see if the user's answer matches the correct answer
-                if (CheckAnswer(userAnswer, correctAnswer))
+                catch (FormatException)
                 {
-                    // Add to the score if answered correctly
-                    TotalScore(1);
-                    // Let the user know they got it right!
-                    Console.WriteLine("That is correct! I feel like we've known each other for years!");
-                }
-                else
+                    Console.WriteLine("Please enter a whole number between 1 and 4");
+                 }
+                finally
                 {
-                    // Let user know they got it wrong
-                    Console.WriteLine("That is incorrect. You don't know me at all, do you? :(");
+                    Console.WriteLine($"Your current score is { score } out of { totalQuestions }");
                 }
             }
         }
