@@ -78,7 +78,7 @@ namespace AboutMeQuiz
                     mainQuestion = "\nQuestion 1. Which martial art have I not studied?\n";
                     correctAnswer = "\t1. Brazilian Jujitsu\n";
                     potentialAnswer1 = "\t2. Aikido\n";
-                    potentialAnswer2 = "\t3. Tae Kwan Do\n";
+                    potentialAnswer2 = "\t3. Tae Kwon Do\n";
                     potentialAnswer3 = "\t4. Jeet Kune Do\n";
 
                     fullQuestion = mainQuestion + correctAnswer + potentialAnswer1 + potentialAnswer2 + potentialAnswer3;
